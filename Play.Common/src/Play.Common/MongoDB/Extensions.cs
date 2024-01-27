@@ -1,18 +1,20 @@
-using DnsClient.Protocol;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
-using Play.Catalog.Service.Entities;
+using Play.Common.Settings;
+using MongoDB.Bson;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Play.Catalog.Service.Repositories
+
+
+namespace Play.Common.MongoDB
 {
     public static class Extensions
     {
         public static IServiceCollection AddMongo(this IServiceCollection services){
-            BsonSerializer.RegisterSerializer(new GuidSerializer(MongoDB.Bson.BsonType.String)); //This is to make sure that the GUIDs are stored as strings in the database
-            BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(MongoDB.Bson.BsonType.String));
+            BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String)); //This is to make sure that the GUIDs are stored as strings in the database
+            BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
 
             
 

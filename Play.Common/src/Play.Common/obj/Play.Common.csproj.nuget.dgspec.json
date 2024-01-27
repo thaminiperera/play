@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Thamini\\play\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {}
+    "D:\\Thamini\\play\\Play.Common\\src\\Play.Common\\Play.Common.csproj": {}
   },
   "projects": {
-    "D:\\Thamini\\play\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {
+    "D:\\Thamini\\play\\Play.Common\\src\\Play.Common\\Play.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Thamini\\play\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
-        "projectName": "Play.Catalog.Service",
-        "projectPath": "D:\\Thamini\\play\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+        "projectUniqueName": "D:\\Thamini\\play\\Play.Common\\src\\Play.Common\\Play.Common.csproj",
+        "projectName": "Play.Common",
+        "projectPath": "D:\\Thamini\\play\\Play.Common\\src\\Play.Common\\Play.Common.csproj",
         "packagesPath": "C:\\Users\\Ravin Perera\\.nuget\\packages\\",
-        "outputPath": "D:\\Thamini\\play\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
+        "outputPath": "D:\\Thamini\\play\\Play.Common\\src\\Play.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ravin Perera\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Thamini\\play\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,13 +40,21 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Play.Common": {
+            "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[8.0.0, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.23.1, )"
             }
           },
           "imports": [
@@ -62,9 +69,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
